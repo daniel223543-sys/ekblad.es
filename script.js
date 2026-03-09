@@ -50,6 +50,17 @@ function updateParallax(scrollPosition){
 
 }
 
+/* Email protection */
+
+const user = "daniel";
+const domain = "ekblad.es";
+
+const email = user + "@" + domain;
+
+const emailElement = document.getElementById("email");
+
+emailElement.innerHTML = `<a href="mailto:${email}">${email}</a>`;
+
 
 /* -------------------------
    Fade-in animation
@@ -68,6 +79,7 @@ const observer = new IntersectionObserver((entries) => {
 },{ threshold:0.25 });
 
 cards.forEach(card => observer.observe(card));
+
 
 
 animate();
